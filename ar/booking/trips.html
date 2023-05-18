@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/assets/img/fav.ico" />
+    <title>حجز الرحلات</title>
+    <!-- Normalize File -->
+    <link rel="stylesheet" href="/assets/css/normalize.css" />
+    <!-- Css File-->
+    <link rel="stylesheet" href="/assets/css/main-ar.css" id="css" />
+    <link rel="stylesheet" href="/assets/css/ticket-ar.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/assets/css/all.min.css" />
+    <!--Swiper Css File -->
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Start Header -->
+    <div class="header" id="header">
+      <div class="container">
+        <a href="/ar" class="logo"
+          ><img src="/assets/img/Logo 1.png" alt="logo"
+        /></a>
+        <div class="nav">
+          <ul class="main-nav" id="nav-links">
+            <li><a href="/ar">الصفحة الرئيسية</a></li>
+            <li id="ticket">
+              <div class="link">
+                الحجز <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="down">
+                <a href="/ar/booking/company.html">حجز الشركة</a>
+                <a href="/ar/booking/trips.html">حجز الرحلات</a>
+                <a href="/ar/booking/private.html">الحجز الخاص</a>
+              </div>
+            </li>
+            <li><a href="/ar/about.html">معلومات عنا</a></li>
+            <li><a href="/ar/contact.html">اتصل بنا</a></li>
+            <li><a href="/booking/trips.html" class="lang">English</a></li>
+          </ul>
+          <div class="nav-toggle" id="toggle">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Header -->
+    <!-- Start landing -->
+    <div class="ticket-landing">
+      <img src="/assets/img/booking.jpg" alt="" />
+      <h3 class="page-header">حجز الرحلات</h3>
+    </div>
+    <!-- End landing -->
+    <div class="form-ticket">
+      <h2 class="main-title">الحجز</h2>
+      <div class="container">
+        <div class="wrapper">
+          <h3>حجز الرحلات</h3>
+          <form>
+            <input
+              type="hidden"
+              name="apikey"
+              value="861686c2-c6f0-4513-9876-4b827d549317"
+            />
+            <input type="hidden" name="from_name" value="Blue Bird Website" />
+            <div class="dbl-field">
+              <div class="field">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="أدخل أسمك"
+                  required
+                />
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="field">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="أدخل بريدك الإلكتروني"
+                  required
+                />
+                <i class="fas fa-envelope"></i>
+              </div>
+            </div>
+            <div class="dbl-field">
+              <div class="field">
+                <input
+                  type="number"
+                  name="phone"
+                  placeholder="أدخل هاتفك"
+                  required
+                />
+                <i class="fas fa-phone-alt"></i>
+              </div>
+            </div>
+            <div class="dbl-field">
+              <div class="field">
+                <input
+                  type="text"
+                  name="place-from"
+                  placeholder="مكان من"
+                  required
+                />
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="field">
+                <input
+                  type="text"
+                  name="place-to"
+                  placeholder="مكان الي"
+                  required
+                />
+                <i class="fa-solid fa-location-crosshairs"></i>
+              </div>
+            </div>
+            <div class="dbl-field">
+              <div class="field">
+                <input
+                  type="text"
+                  name="time-from"
+                  placeholder="الوقت من"
+                  required
+                />
+                <i class="fa-regular fa-clock"></i>
+                <select id="status-time-from">
+                  <option value="AM">صباحا</option>
+                  <option value="PM">مساءً</option>
+                </select>
+              </div>
+              <div class="field">
+                <input
+                  type="text"
+                  name="time-to"
+                  placeholder="وقت إلى"
+                  required
+                />
+                <i class="fa-regular fa-clock"></i>
+                <select id="status-time-to">
+                  <option value="AM">صباحا</option>
+                  <option value="PM">مساءً</option>
+                </select>
+              </div>
+            </div>
+            <div class="dbl-field">
+              <div class="field">
+                <input
+                  type="number"
+                  name="passengers-number"
+                  placeholder="أدخل عدد الركاب"
+                  required
+                />
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <div class="field">
+                <select name="vehicle-type" id="vehicle" required>
+                  <option value="" disabled selected>اختر السيارة</option>
+                  <option value="تويوتا هاي اس 15 راكب">
+                    تويوتا هاي اس 15 راكب
+                  </option>
+                  <option value="تويوتا هاي اس 13 راكب">
+                    تويوتا هاي اس 13 راكب
+                  </option>
+                  <option value="تويوتا كوسنر 25 راكب">
+                    تويوتا كوسنر 25 راكب
+                  </option>
+                  <option value="ميتسوبيشي 28 راكب">ميتسوبيشي 28 راكب</option>
+                  <option value="مني باص 33 راكب">مني باص 33 راكب</option>
+                  <option value="ميكروباص صيني 14 راكب">
+                    ميكروباص صيني 14 راكب
+                  </option>
+                  <option value="باص 50 راكب">باص 50 راكب</option>
+                  <option value="ملاكي">ملاكي</option>
+                </select>
+                <i class="fa-solid fa-car"></i>
+              </div>
+            </div>
+
+            <div class="message">
+              <textarea placeholder="اكتب ملاحظاتك" name="Notes"></textarea>
+              <i class="fa-solid fa-message"></i>
+            </div>
+            <div class="button-area">
+              <button type="submit">إرسال</button>
+              <span> </span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Start brands -->
+    <div class="brands">
+      <h2 class="main-title">Success Partners</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-1.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-2.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-3.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-4.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-5.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-6.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-7.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-8.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-9.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-10.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-11.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-12.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-13.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-14.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-15.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-16.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-17.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-18.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-19.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-20.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-21.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-22.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-23.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-24.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-25.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-26.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End brands -->
+
+    <!-- Start Footer -->
+    <div class="footer">
+      <div class="container">
+        <div class="box">
+          <h3>بلو بيرد</h3>
+          <ul class="social">
+            <li>
+              <a
+                href="https://www.facebook.com/blue.bird.tavel"
+                target="_blank"
+                class="facebook"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                class="linkedin"
+                href="https://www.linkedin.com/in/blue-bird-travel-7b760a20b"
+                target="_blank"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+          <p class="text">
+            الريادة في تقديم خدمات النقل للعمال والموظفين ورجال الأعمال
+          </p>
+        </div>
+        <div class="box">
+          <ul class="links">
+            <li><a href="/ar/booking/company.html">حجز الشركة</a></li>
+            <li><a href="/ar/booking/private.html">حجز خاص</a></li>
+            <li><a href="/ar/booking/trips.html">حجز الرحلات </a></li>
+            <li><a href="/ar/about.html">معلومات عنا </a></li>
+            <li><a href="/ar/contact.html">اتصل بنا</a></li>
+          </ul>
+        </div>
+        <div class="box">
+          <div class="line">
+            <i class="fas fa-map-marker-alt fa-fw"></i>
+            <div class="info">مصر ، الجيزة ، 6 أكتوبر</div>
+          </div>
+          <div class="line">
+            <i class="far fa-clock fa-fw"></i>
+            <div class="info">ساعات العمل: من 9:00 إلى 17:00</div>
+          </div>
+          <div class="line">
+            <i class="fas fa-phone-volume fa-fw"></i>
+            <div class="info">
+              <span>201124998888</span>
+              <span>201124993333</span>
+            </div>
+          </div>
+        </div>
+        <div class="box footer-gallery">
+          <img src="/assets/img/about.jpg" alt="" />
+          <img src="/assets/img/contact.jpg" alt="" />
+          <img src="/assets/img/booking.jpg" alt="" />
+          <img src="/assets/img/home/1-landing.jpeg" alt="" />
+          <img src="/assets/img/home/4-landing.jpg" alt="" />
+          <img src="/assets/img/home/privatejpg.jpg" alt="" />
+          <img src="/assets/img/home/5-landing.jpeg" alt="" />
+          <img src="/assets/img/home/2-landing.jpeg" alt="" />
+          <img src="/assets/img/home/3-landing.jpeg" alt="" />
+        </div>
+      </div>
+      <p class="copyright">Copyright 2023</p>
+    </div>
+    <!-- End Footer -->
+
+    <!-- Start Support Chat -->
+    <div class="support">
+      <div class="icon" id="chat-btn">
+        <i class="fa-solid fa-message"></i>
+        <span id="notification">مرحبا بك في الدعم الفني لبلو بيرد 👋</span>
+      </div>
+      <div class="chat" id="chat-messages">
+        <div class="message">
+          <p>مرحبا بك في الدعم الفني لبلو بيرد 👋</p>
+          <a href="https://wa.me/0201124998888" target="_blank"
+            ><i class="fa-brands fa-whatsapp"></i> اتصال عبر WhatsApp</a
+          >
+          <a href="mailto:bluebird@bluebird-egypt.com"
+            ><i class="fa-solid fa-envelope"></i>تواصل عبر الايميل</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- End Support Chat -->
+
+    <!-- Start Go Top Button -->
+    <span class="go-top">
+      <i class="fa-solid fa-angles-up"></i>
+    </span>
+    <!-- End Go Top Button -->
+
+    <!-- Swiper JavaScript File -->
+    <script src="/assets/js/swiper-bundle.min.js"></script>
+    <script src="/assets/js/slider-swiper.js"></script>
+    <!-- JS -->
+    <script src="/assets/js/global.js"></script>
+    <script src="/assets/js/ticket-form.js"></script>
+  </body>
+</html>

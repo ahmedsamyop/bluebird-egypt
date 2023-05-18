@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/assets/img/fav.ico" />
+    <title>Trips booking</title>
+    <!-- Normalize File -->
+    <link rel="stylesheet" href="/assets/css/normalize.css" />
+    <!-- Css File-->
+    <link rel="stylesheet" href="/assets/css/main.css" id="css" />
+    <link rel="stylesheet" href="/assets/css/ticket.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/assets/css/all.min.css" />
+    <!--Swiper Css File -->
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;800&family=Roboto:wght@300;400;500;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Start Header -->
+    <div class="header" id="header">
+      <div class="container">
+        <a href="/" class="logo"
+          ><img src="/assets/img/Logo 1.png" alt="logo"
+        /></a>
+        <div class="nav">
+          <ul class="main-nav" id="nav-links">
+            <li><a href="/">Home</a></li>
+            <li id="ticket">
+              <div class="link">
+                Ticket <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="down">
+                <a href="/booking/company.html">Company booking</a>
+                <a href="/booking/trips.html">Trips booking</a>
+                <a href="/booking/private.html">Private booking</a>
+              </div>
+            </li>
+            <li><a href="/about.html">About us</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li>
+              <a href="/ar/booking/trips.html" class="lang">اللغة العربية</a>
+            </li>
+          </ul>
+          <div class="nav-toggle" id="toggle">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Header -->
+    <!-- Start landing -->
+    <div class="ticket-landing">
+      <img src="/assets/img/booking.jpg" alt="" />
+      <h3 class="page-header">Trips Booking</h3>
+    </div>
+    <!-- End landing -->
+    <div class="form-ticket">
+      <h2 class="main-title">Booking</h2>
+      <div class="container">
+        <div class="wrapper">
+          <h3>Trips Booking</h3>
+          <form>
+            <input
+              type="hidden"
+              name="apikey"
+              value="861686c2-c6f0-4513-9876-4b827d549317"
+            />
+            <input type="hidden" name="from_name" value="Blue Bird Website" />
+            <div class="dbl-field">
+              <div class="field">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Enter your name"
+                  required
+                />
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="field">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required
+                />
+                <i class="fas fa-envelope"></i>
+              </div>
+            </div>
+            <div class="dbl-field">
+              <div class="field">
+                <input
+                  type="number"
+                  name="phone"
+                  placeholder="Enter your phone"
+                  required
+                />
+                <i class="fas fa-phone-alt"></i>
+              </div>
+            </div>
+            <div class="dbl-field">
+              <div class="field">
+                <input
+                  type="text"
+                  name="place-from"
+                  placeholder="Place From"
+                  required
+                />
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="field">
+                <input
+                  type="text"
+                  name="place-to"
+                  placeholder="Place To"
+                  required
+                />
+                <i class="fa-solid fa-location-crosshairs"></i>
+              </div>
+            </div>
+            <div class="dbl-field">
+              <div class="field">
+                <input
+                  type="text"
+                  name="time-from"
+                  placeholder="Time from"
+                  required
+                />
+                <i class="fa-regular fa-clock"></i>
+                <select id="status-time-from">
+                  <option value="AM">AM</option>
+                  <option value="PM">PM</option>
+                </select>
+              </div>
+              <div class="field">
+                <input
+                  type="text"
+                  name="time-to"
+                  placeholder="Time To"
+                  required
+                />
+                <i class="fa-regular fa-clock"></i>
+                <select id="status-time-to">
+                  <option value="AM">AM</option>
+                  <option value="PM">PM</option>
+                </select>
+              </div>
+            </div>
+            <div class="dbl-field">
+              <div class="field">
+                <input
+                  type="number"
+                  name="passengers-number"
+                  placeholder="Enter Passengers number"
+                  required
+                />
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <div class="field">
+                <select name="vehicle-type" id="vehicle" required>
+                  <option value="" disabled selected>Select Vehicle</option>
+                  <option value="Toyota Hiace 15 passengers">
+                    Toyota Hiace 15 passengers
+                  </option>
+                  <option value="Toyota Hiace 13 passengers">
+                    Toyota Hiace 13 passengers
+                  </option>
+                  <option value="Toyota Kosner 25 passengers">
+                    Toyota Kosner 25 passengers
+                  </option>
+                  <option value="Mitsubishi 28 passenger">
+                    Mitsubishi 28 passenger
+                  </option>
+                  <option value="Minibus 33 passengers">
+                    Minibus 33 passengers
+                  </option>
+                  <option value="Chinese microbus 14 passengers">
+                    Chinese microbus 14 passengers
+                  </option>
+                  <option value="50 passenger bus">50 passenger bus</option>
+                  <option value="My Angel">My Angel</option>
+                </select>
+                <i class="fa-solid fa-car"></i>
+              </div>
+            </div>
+
+            <div class="message">
+              <textarea placeholder="Write your Notes" name="Notes"></textarea>
+              <i class="fa-solid fa-message"></i>
+            </div>
+            <div class="button-area">
+              <button type="submit">Send Ticket</button>
+              <span> </span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Start brands -->
+    <div class="brands">
+      <h2 class="main-title">Success Partners</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-1.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-2.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-3.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-4.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-5.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-6.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-7.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-8.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-9.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-10.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-11.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-12.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-13.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-14.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-15.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-16.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-17.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-18.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-19.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-20.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-21.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-22.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-23.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-24.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-25.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/img/slider/slider-26.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End brands -->
+
+    <!-- Start Footer -->
+    <div class="footer">
+      <div class="container">
+        <div class="box">
+          <h3>Blue Pird</h3>
+          <ul class="social">
+            <li>
+              <a
+                href="https://www.facebook.com/blue.bird.tavel"
+                target="_blank"
+                class="facebook"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                class="linkedin"
+                href="https://www.linkedin.com/in/blue-bird-travel-7b760a20b"
+                target="_blank"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+          <p class="text">
+            Leadership in providing transportation services for workers,
+            employees and businessmen
+          </p>
+        </div>
+        <div class="box">
+          <ul class="links">
+            <li><a href="/booking/company.html">Company booking</a></li>
+            <li><a href="/booking/private.html">Private booking</a></li>
+            <li><a href="/booking/trips.html">Trips booking</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="box">
+          <div class="line">
+            <i class="fas fa-map-marker-alt fa-fw"></i>
+            <div class="info">Egypt, Giza, 6th of October</div>
+          </div>
+          <div class="line">
+            <i class="far fa-clock fa-fw"></i>
+            <div class="info">Business Hours: From 9:00 To 17:00</div>
+          </div>
+          <div class="line">
+            <i class="fas fa-phone-volume fa-fw"></i>
+            <div class="info">
+              <span>+201124998888</span>
+              <span>+201124993333</span>
+            </div>
+          </div>
+        </div>
+        <div class="box footer-gallery">
+          <img src="/assets/img/about.jpg" alt="" />
+          <img src="/assets/img/contact.jpg" alt="" />
+          <img src="/assets/img/booking.jpg" alt="" />
+          <img src="/assets/img/home/1-landing.jpeg" alt="" />
+          <img src="/assets/img/home/4-landing.jpg" alt="" />
+          <img src="/assets/img/home/privatejpg.jpg" alt="" />
+          <img src="/assets/img/home/5-landing.jpeg" alt="" />
+          <img src="/assets/img/home/2-landing.jpeg" alt="" />
+          <img src="/assets/img/home/3-landing.jpeg" alt="" />
+        </div>
+      </div>
+      <p class="copyright">Copyright 2023</p>
+    </div>
+    <!-- End Footer -->
+
+    <!-- Start Support Chat -->
+    <div class="support">
+      <div class="icon" id="chat-btn">
+        <i class="fa-solid fa-message"></i>
+        <span id="notification">Welcome Blue Bird Support 👋</span>
+      </div>
+      <div class="chat" id="chat-messages">
+        <div class="message">
+          <p>Welcome Blue Bird Support 👋</p>
+          <a href="https://wa.me/0201124998888" target="_blank"
+            ><i class="fa-brands fa-whatsapp"></i> WhatsApp Connection</a
+          >
+          <a href="mailto:bluebird@bluebird-egypt.com"
+            ><i class="fa-solid fa-envelope"></i> Email Connection</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- End Support Chat -->
+
+    <!-- Start Go Top Button -->
+    <span class="go-top">
+      <i class="fa-solid fa-angles-up"></i>
+    </span>
+    <!-- End Go Top Button -->
+
+    <!-- Swiper JavaScript File -->
+    <script src="/assets/js/swiper-bundle.min.js"></script>
+    <script src="/assets/js/slider-swiper.js"></script>
+    <!-- JS -->
+    <script src="/assets/js/global.js"></script>
+    <script src="/assets/js/ticket-form.js"></script>
+  </body>
+</html>
